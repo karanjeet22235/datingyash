@@ -1,3 +1,4 @@
+import { type ReactElement } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
@@ -22,7 +23,7 @@ import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminReports from './pages/admin/AdminReports';
 import AdminVerification from './pages/admin/AdminVerification';
 
-function PrivateRoute({ children }: { children: JSX.Element }) {
+function PrivateRoute({ children }: { children: ReactElement }) {
   const { user, loading } = useAuth();
   if (loading) return <p className="text-center py-20">Loading...</p>;
   if (!user) return <Navigate to="/login" />;

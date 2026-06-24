@@ -3,7 +3,7 @@ import { api } from '../api/client';
 import { useAuth } from '../context/AuthContext';
 
 export default function Verification() {
-  const { user, refreshUser } = useAuth();
+  const { refreshUser } = useAuth();
   const [status, setStatus] = useState<any>(null);
   const [fullName, setFullName] = useState('');
   const [dob, setDob] = useState('');

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { api } from '../api/client';
-import { UserProfile } from '../types';
+import type { UserProfile } from '../types';
 import TrustBadge from '../components/TrustBadge';
 
 export default function ProfileView() {

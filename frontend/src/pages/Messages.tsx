@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { api } from '../api/client';
 import { getSocket } from '../api/socket';
 import { useAuth } from '../context/AuthContext';
-import { ChatMessage, MatchSummary } from '../types';
+import type { ChatMessage, MatchSummary } from '../types';
 
 export default function Messages() {
   const { user } = useAuth();
